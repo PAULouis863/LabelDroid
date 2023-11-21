@@ -28,7 +28,10 @@ def main(args):
 	device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 	# Create result model directory
-	args.model_path += "_" + args.caption_model
+	if type(args.model_path) is not str:
+		str(args.model_path)
+	else:
+		args.model_path += "_" + args.caption_model
 	if args.finetune_cnn:
 		args.model_path += "_finetune"
 		

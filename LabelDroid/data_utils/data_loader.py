@@ -13,7 +13,7 @@ from torch.utils.data import Dataset
 from torch.autograd import Variable
 from torchvision import transforms
 import random
-from gensim.models import FastText as ft
+from gensim.models import FastText as ft 
 
 from imgaug import augmenters as iaa
 import imgaug as ia
@@ -93,7 +93,7 @@ class AccessibilityDataset(Dataset):
 
 	def subsequent_mask(self, size):
 	    "Mask out subsequent positions."
-	    attn_shape = (size, size)
+		attn_shape = (size, size)
 	    subsequent_mask = np.triu(np.ones(attn_shape), k=1).astype('uint8')
 	    return torch.from_numpy(subsequent_mask) == 0
 
