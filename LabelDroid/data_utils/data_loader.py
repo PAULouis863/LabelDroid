@@ -90,13 +90,11 @@ class AccessibilityDataset(Dataset):
 					transforms.Normalize(mean = [ 0.485, 0.456, 0.406 ], 
 							     std  = [ 0.229, 0.224, 0.225 ])
 					])
-
 	def subsequent_mask(self, size):
-	    "Mask out subsequent positions."
+		"Mask out subsequent positions."
 		attn_shape = (size, size)
-	    subsequent_mask = np.triu(np.ones(attn_shape), k=1).astype('uint8')
-	    return torch.from_numpy(subsequent_mask) == 0
-
+		subsequent_mask = np.triu(np.ones(attn_shape), k=1).astype('uint8')
+		return torch.from_numpy(subsequent_mask) == 0
 	def __getitem__(self, idx):
 		data = self.data
 		vocab = self.vocab
