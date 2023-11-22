@@ -1,5 +1,5 @@
 python3 train.py \
---image_root Accessibility_Dataset \
+--image_root ./data/train \
 --caption_path annotation \
 --vocab_path ./data/vocab.pkl \
 --caption_model transformer \

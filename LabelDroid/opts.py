@@ -10,7 +10,7 @@ def get_opt():
 	# Data settings
 	parser.add_argument('--image_root', type=str, default= './data/',\
 			help='directory containing coco dataset train2014, val2014, & annotations')
-	parser.add_argument('--caption_path', type=str, default= "/data/annotation/captions_train.json", help='caption_train/val/test.json path')
+	parser.add_argument('--caption_path', type=str, default= "./data/annotation/captions_train.json", help='caption_train/val/test.json path')
 	parser.add_argument('--vocab_path', type=str, default= "data/vocab.pkl", help='vocabulary path')
 	parser.add_argument('--checkpoint', type=str, help='load trained model')
 	
