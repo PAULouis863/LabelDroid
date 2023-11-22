@@ -1,6 +1,6 @@
 python3 train.py \
 --image_root ./data/train \
---caption_path annotation \
+--caption_path ./data/annotation \
 --vocab_path ./data/vocab.pkl \
 --caption_model transformer \
 --model_path run/models \
