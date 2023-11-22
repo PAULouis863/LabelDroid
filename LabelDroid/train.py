@@ -29,9 +29,9 @@ def main(args):
 
 	# Create result model directory
 	if type(args.model_path) is not str:
-		str(args.model_path)
+		return str(args.model_path)
 	else:
-		args.model_path += "_" + args.caption_model
+		args.model_path += "_" + str(args.caption_model)
 	if args.finetune_cnn:
 		args.model_path += "_finetune"
 		
